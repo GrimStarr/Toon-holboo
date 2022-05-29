@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Лаб 3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+      body {
+        background: #000000;
+      }
+      .containertwo {
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        background-color: #000000;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      .containertwo span {
+        text-transform: uppercase;
+        display: block;
+      }
+      #blinkertwo {
+        padding-top: 20%;
+        width: 100%;
+        height: 383px;
+        animation-name: starting;
+        animation-play-state: paused;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+        animation-duration: 1.3s;
+        opacity: 0;
+      }
+      @keyframes starting {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+          background: black;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+          background: black;
+        }
+      }
+      .text1 {
+        color: white;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 8px;
+        margin: 0px auto;
+        margin-bottom: 20px;
+        width: 54.2%;
+        background: transparent;
+        position: relative;
+        animation: text 3s 1;
+        animation-timing-function: ease-in-out;
+        z-index: 10;
+        float: none;
+        cursor: default;
+      }
+      .text2 {
+        position: relative;
+        margin: 0px auto;
+        font-size: 30px;
+        color: #e74c3c;
+        margin-bottom: 20px;
+        animation: text 4s 1;
+        z-index: 8;
+        cursor: default;
+        float: none;
+      }
+      li {
+        display: inline-block;
+        float: none;
+      }
+      li a {
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        font-weight: lighter;
+      }
+      .text3::after {
+        color: green;
+        border: green;
+      }
+      .text3:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+      .text3 {
+        animation: texttwo 3s 2.5s;
+        color: white;
+        background: black;
+        font-family: sans-serif;
+        font-weight: bold;
+        border: 2px solid white;
+        padding: 2px;
+        padding-bottom: 0px;
+        transition: all 0.6s;
+      }
+      @keyframes texttwo {
+        0% {
+          opacity: 0;
+        }
+
+        15% {
+          opacity: 0;
+          color: black;
+          margin-bottom: -30px;
+        }
+        35% {
+          opacity: 0;
+          letter-spacing: 25px;
+          margin-bottom: -30px;
+        }
+        50% {
+          opacity: 1;
+        }
+        85% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes text {
+        0% {
+          color: black;
+          margin-bottom: -30px;
+          background-color: black;
+        }
+        30% {
+          letter-spacing: 25px;
+          margin-bottom: -30px;
+          background-color: black;
+        }
+        70% {
+          letter-spacing: 8px;
+          background-color: black;
+        }
+        85% {
+          margin-bottom: -30px;
+          background-color: black;
+        }
+      }
+    </style>
+    <script>
+      function start() {
+        document.getElementById("blinkertwo").style.animationPlayState =
+          "running";
+        document.getElementById("text1").style.animationPlayState = "running";
+        document.getElementById("animtwo").style.pointerEvents = "none";
+        console.log("Started");
+        var x = setTimeout(affect, 1300);
+        function affect() {
+          document.getElementById("containertwo").style.zIndex = "0";
+        }
+        setTimeout(function () {
+          window.open("/lab3", "_self");
+        }, 1000);
+      }
+    </script>
+  </head>
+  <body scroll="no" background="">
+    <div class="containertwo">
+      <div id="blinkertwo">
+        <span class="text1" id="text1">Тоон холбоо</span>
+        <span class="text2">Лаб 3</span>
+        <li>
+          <span class="text3" id="animtwo" onclick="start()"> эхлэх </span>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css.css" />
+    <title>GNU</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <button class="button">Button</button>
+
+      <div class="option">
+        <p1
+          ><center><b>Options</b></center></p1
+        >
+        <p2>
+          <p><b>Title:</b> tutorial</p></p2
+        >
+        <p2>
+          <p><b>Output Language:</b> Phython</p></p2
+        >
+        <p2>
+          <p><b>Generate Options:</b> Bokeh GUI</p></p2
+        >
+      </div>
+
+      <div class="variable">
+        <p1
+          ><center><b>Variable</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> samp_rate</p></p2
+        >
+        <p2>
+          <p><b>Value:</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="slider">
+        <p1
+          ><center><b>Bokeh GUI Slider</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> frequency</p></p2
+        >
+        <p2>
+          <p><b>Label:</b> Frequency</p></p2
+        >
+        <p2>
+          <p><b>Start:</b> 100</p></p2
+        >
+        <p2>
+          <p><b>End:</b> 10k</p></p2
+        >
+        <p2>
+          <p><b>Default Value:</b> 5k</p></p2
+        >
+        <p2>
+          <p><b>Throttle:</b> 1</p></p2
+        >
+      </div>
+
+      <div class="slider1">
+        <p1
+          ><center><b>Bokeh GUI Slider</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> noise_amp</p></p2
+        >
+        <p2>
+          <p><b>Label:</b> Noise Amplitude</p></p2
+        >
+        <p2>
+          <p><b>Start:</b> 10m</p></p2
+        >
+        <p2>
+          <p><b>End:</b> 10</p></p2
+        >
+        <p2>
+          <p><b>Default Value:</b> 10m</p></p2
+        >
+        <p2>
+          <p><b>Throttle:</b> 1</p></p2
+        >
+      </div>
+
+      <div class="slider2">
+        <p1
+          ><center><b>Bokeh GUI Slider</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> signal_amp</p></p2
+        >
+        <p2>
+          <p><b>Label:</b> Signal Amplitude</p></p2
+        >
+        <p2>
+          <p><b>Start:</b> 0</p></p2
+        >
+        <p2>
+          <p><b>End:</b> 10</p></p2
+        >
+        <p2>
+          <p><b>Default Value:</b> 5</p></p2
+        >
+        <p2>
+          <p><b>Throttle:</b> 1</p></p2
+        >
+      </div>
+
+      <div class="signal">
+        <p1
+          ><center><b>Signal Source</b></center></p1
+        >
+        <p2>
+          <p><b>Sample Rate:</b> 32k</p></p2
+        >
+        <p2>
+          <p><b>Waveform:</b> Cosine</p></p2
+        >
+        <p2>
+          <p><b>Frequency:</b> 5k</p></p2
+        >
+        <p2>
+          <p><b>Amplitude:</b> 5</p></p2
+        >
+        <p2>
+          <p><b>Offset:</b> 0</p></p2
+        >
+        <p2>
+          <p><b>Initial Phase (Radians):</b> 0</p></p2
+        >
+      </div>
+
+      <div class="noise">
+        <p1
+          ><center><b>Noise Source</b></center></p1
+        >
+        <p2>
+          <p><b>Noise type:</b> Gaussian</p></p2
+        >
+        <p2>
+          <p><b>Amplitude:</b> 10m</p></p2
+        >
+        <p2>
+          <p><b>Seed:</b> 0</p></p2
+        >
+      </div>
+
+      <div class="add">
+        <p1
+          ><center>
+            <b><br />Add</b>
+          </center></p1
+        >
+      </div>
+
+      <div class="bokeh">
+        <p1
+          ><center><b>Bokeh GUI Waterfall Sink</b></center></p1
+        >
+        <p2>
+          <p><b>FFT Size:</b> 1.024k</p></p2
+        >
+        <p2>
+          <p><b>Center Frequency (Hz):</b> 0</p></p2
+        >
+        <p2>
+          <p><b>Bandwith (Hz):</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="time">
+        <p1
+          ><center><b>Bokeh GUI Frequency Sink</b></center></p1
+        >
+        <p2>
+          <p><b>FFT Size:</b> 1.024k</p></p2
+        >
+        <p2>
+          <p><b>Center Frequency Sink:</b> 0</p></p2
+        >
+        <p2>
+          <p><b>Bandwith (Hz):</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="throttle">
+        <p1
+          ><center><b>Throttle</b></center></p1
+        >
+        <p2>
+          <p><b>Sample Rate:</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="out1">
+        <p>out</p>
+      </div>
+
+      <div class="out2">
+        <p>out</p>
+      </div>
+
+      <div class="out3">
+        <p>out</p>
+      </div>
+
+      <div class="in0">
+        <p>in0</p>
+      </div>
+
+      <div class="in1">
+        <p>in1</p>
+      </div>
+
+      <div class="out4">
+        <p>in</p>
+      </div>
+
+      <div class="out5">
+        <p>in</p>
+      </div>
+
+      <div class="out6">
+        <p>in</p>
+      </div>
+
+      <div class="out7">
+        <p>out</p>
+      </div>
+    </div>
+  </body>
+</html>

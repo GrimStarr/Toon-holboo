@@ -18,6 +18,17 @@ router.get("/:arg", (req, res) => {
       console.log(result);
     }
   });
+  const yaml = require("js-yaml");
+  const fs = require("fs");
+
+  // Get document, or throw exception on error
+  try {
+    const doc = yaml.load(fs.readFileSync("./web.grc", "utf8"));
+    console.log(doc.blocks);
+    res.send(home);
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 // router.get("/back", (req, res) => {

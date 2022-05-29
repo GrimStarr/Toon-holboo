@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        margin: 0;
+        font-size: small;
+      }
+
+      body {
+        background-color: white;
+      }
+
+      #container {
+        position: absolute;
+        width: 1400px;
+      }
+
+      .button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .option {
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 3px;
+        height: 65px;
+        width: 13%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .variable {
+        border: 1px solid black;
+        margin-top: -175px;
+        margin-left: 200px;
+        height: 50px;
+        width: 6%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .slider {
+        border: 1px solid black;
+        margin-top: -62px;
+        margin-left: 300px;
+        height: 110px;
+        width: 8%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .slider1 {
+        border: 1px solid black;
+        margin-top: -122px;
+        margin-left: 440px;
+        height: 110px;
+        width: 10%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .slider2 {
+        border: 1px solid black;
+        margin-top: -122px;
+        margin-left: 605px;
+        height: 110px;
+        width: 10%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .signal {
+        border: 1px solid black;
+        margin-top: 60px;
+        margin-left: 230px;
+        height: 115px;
+        width: 11%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .noise {
+        border: 1px solid black;
+        margin-top: 120px;
+        margin-left: 200px;
+        height: 65px;
+        width: 9%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .add {
+        border: 1px solid black;
+        margin-top: -200px;
+        margin-left: 600px;
+        height: 50px;
+        width: 2%;
+        background-color: beige;
+        padding: 10px;
+      }
+
+      .bokeh {
+        border: 1px solid black;
+        margin-top: -150px;
+        margin-left: 1100px;
+        height: 65px;
+        width: 11%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .time {
+        border: 1px solid black;
+        margin-top: 80px;
+        margin-left: 1100px;
+        height: 65px;
+        width: 12%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .throttle {
+        border: 1px solid black;
+        margin-top: -140px;
+        margin-left: 750px;
+        height: 30px;
+        width: 8%;
+        background-color: beige;
+        padding: 5px;
+      }
+
+      .out1 {
+        border: 1px solid black;
+        margin-top: -127px;
+        margin-left: 391px;
+        height: 15px;
+        width: 2%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .out2 {
+        border: 1px solid black;
+        margin-top: 205px;
+        margin-left: 334px;
+        height: 15px;
+        width: 2%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .out3 {
+        border: 1px solid black;
+        margin-top: -143px;
+        margin-left: 649px;
+        height: 15px;
+        width: 2%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .in0 {
+        border: 1px solid black;
+        margin-top: -35px;
+        margin-left: 572px;
+        height: 15px;
+        width: 2%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .in1 {
+        border: 1px solid black;
+        margin-top: 20px;
+        margin-left: 572px;
+        height: 15px;
+        width: 2%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .out4 {
+        border: 1px solid black;
+        margin-top: -110px;
+        margin-left: 1085px;
+        height: 15px;
+        width: 1%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .out5 {
+        border: 1px solid black;
+        margin-top: 132px;
+        margin-left: 1085px;
+        height: 15px;
+        width: 1%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .out6 {
+        border: 1px solid black;
+        margin-top: -90px;
+        margin-left: 735px;
+        height: 15px;
+        width: 1%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+
+      .out7 {
+        border: 1px solid black;
+        margin-top: -17px;
+        margin-left: 870px;
+        height: 15px;
+        width: 2%;
+        background-color: rgb(235, 137, 8);
+        text-align: center;
+      }
+    </style>
+    <title>GNU</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <button class="button">Button</button>
+
+      <div class="option">
+        <p1
+          ><center><b>Options</b></center></p1
+        >
+        <p2>
+          <p><b>Title:</b> tutorial</p></p2
+        >
+        <p2>
+          <p><b>Output Language:</b> Phython</p></p2
+        >
+        <p2>
+          <p><b>Generate Options:</b> Bokeh GUI</p></p2
+        >
+      </div>
+
+      <div class="variable">
+        <p1
+          ><center><b>Variable</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> samp_rate</p></p2
+        >
+        <p2>
+          <p><b>Value:</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="slider">
+        <p1
+          ><center><b>Bokeh GUI Slider</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> frequency</p></p2
+        >
+        <p2>
+          <p><b>Label:</b> Frequency</p></p2
+        >
+        <p2>
+          <p><b>Start:</b> 100</p></p2
+        >
+        <p2>
+          <p><b>End:</b> 10k</p></p2
+        >
+        <p2>
+          <p><b>Default Value:</b> 5k</p></p2
+        >
+        <p2>
+          <p><b>Throttle:</b> 1</p></p2
+        >
+      </div>
+
+      <div class="slider1">
+        <p1
+          ><center><b>Bokeh GUI Slider</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> noise_amp</p></p2
+        >
+        <p2>
+          <p><b>Label:</b> Noise Amplitude</p></p2
+        >
+        <p2>
+          <p><b>Start:</b> 10m</p></p2
+        >
+        <p2>
+          <p><b>End:</b> 10</p></p2
+        >
+        <p2>
+          <p><b>Default Value:</b> 10m</p></p2
+        >
+        <p2>
+          <p><b>Throttle:</b> 1</p></p2
+        >
+      </div>
+
+      <div class="slider2">
+        <p1
+          ><center><b>Bokeh GUI Slider</b></center></p1
+        >
+        <p2>
+          <p><b>ID:</b> signal_amp</p></p2
+        >
+        <p2>
+          <p><b>Label:</b> Signal Amplitude</p></p2
+        >
+        <p2>
+          <p><b>Start:</b> 0</p></p2
+        >
+        <p2>
+          <p><b>End:</b> 10</p></p2
+        >
+        <p2>
+          <p><b>Default Value:</b> 5</p></p2
+        >
+        <p2>
+          <p><b>Throttle:</b> 1</p></p2
+        >
+      </div>
+
+      <div class="signal">
+        <p1
+          ><center><b>Signal Source</b></center></p1
+        >
+        <p2>
+          <p><b>Sample Rate:</b> 32k</p></p2
+        >
+        <p2>
+          <p><b>Waveform:</b> Cosine</p></p2
+        >
+        <p2>
+          <p><b>Frequency:</b> 5k</p></p2
+        >
+        <p2>
+          <p><b>Amplitude:</b> 5</p></p2
+        >
+        <p2>
+          <p><b>Offset:</b> 0</p></p2
+        >
+        <p2>
+          <p><b>Initial Phase (Radians):</b> 0</p></p2
+        >
+      </div>
+
+      <div class="noise">
+        <p1
+          ><center><b>Noise Source</b></center></p1
+        >
+        <p2>
+          <p><b>Noise type:</b> Gaussian</p></p2
+        >
+        <p2>
+          <p><b>Amplitude:</b> 10m</p></p2
+        >
+        <p2>
+          <p><b>Seed:</b> 0</p></p2
+        >
+      </div>
+
+      <div class="add">
+        <p1
+          ><center>
+            <b><br />Add</b>
+          </center></p1
+        >
+      </div>
+
+      <div class="bokeh">
+        <p1
+          ><center><b>Bokeh GUI Waterfall Sink</b></center></p1
+        >
+        <p2>
+          <p><b>FFT Size:</b> 1.024k</p></p2
+        >
+        <p2>
+          <p><b>Center Frequency (Hz):</b> 0</p></p2
+        >
+        <p2>
+          <p><b>Bandwith (Hz):</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="time">
+        <p1
+          ><center><b>Bokeh GUI Frequency Sink</b></center></p1
+        >
+        <p2>
+          <p><b>FFT Size:</b> 1.024k</p></p2
+        >
+        <p2>
+          <p><b>Center Frequency Sink:</b> 0</p></p2
+        >
+        <p2>
+          <p><b>Bandwith (Hz):</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="throttle">
+        <p1
+          ><center><b>Throttle</b></center></p1
+        >
+        <p2>
+          <p><b>Sample Rate:</b> 32k</p></p2
+        >
+      </div>
+
+      <div class="out1">
+        <p>out</p>
+      </div>
+
+      <div class="out2">
+        <p>out</p>
+      </div>
+
+      <div class="out3">
+        <p>out</p>
+      </div>
+
+      <div class="in0">
+        <p>in0</p>
+      </div>
+
+      <div class="in1">
+        <p>in1</p>
+      </div>
+
+      <div class="out4">
+        <p>in</p>
+      </div>
+
+      <div class="out5">
+        <p>in</p>
+      </div>
+
+      <div class="out6">
+        <p>in</p>
+      </div>
+
+      <div class="out7">
+        <p>out</p>
+      </div>
+    </div>
+  </body>
+</html>
