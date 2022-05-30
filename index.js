@@ -31,15 +31,26 @@ app.get("/lab3", (req, res) => {
         block_freq_end: doc.blocks[0].parameters.end,
         block_freq_value: doc.blocks[0].parameters.value,
         block_freq_throt: doc.blocks[0].parameters.throttle,
-        noise_amp: doc.blocks[1].parameters.name,
+        noise_amp: doc.blocks[1].name,
         noise_amp_label: doc.blocks[1].parameters.label,
         noise_amp_start: doc.blocks[1].parameters.start,
         noise_amp_end: doc.blocks[1].parameters.end,
         noise_amp_value: doc.blocks[1].parameters.value,
         noise_amp_throt: doc.blocks[1].parameters.throttle,
+        signal_amp: doc.blocks[3].name,
+        signal_amp_label: doc.blocks[3].parameters.label,
+        signal_amp_start: doc.blocks[3].parameters.start,
+        signal_amp_end: doc.blocks[3].parameters.end,
+        signal_amp_value: doc.blocks[3].parameters.value,
+        signal_amp_throt: doc.blocks[3].parameters.throttle,
         variable: doc.blocks[2].name,
         variable_val: doc.blocks[2].parameters.value,
-        noise_source_seed: doc.blocks[4].parameters.serr,
+        noise_source_seed: doc.blocks[4].parameters.seed,
+        signal_source_offset: doc.blocks[5].parameters.offset,
+        signal_source_phase: doc.blocks[5].parameters.phase,
+        bokeh_gui_freq_fft: doc.blocks[8].parameters.fftsize,
+        bokeh_gui_freq_center: doc.blocks[8].parameters.fc,
+        bokeh_gui_time_points: doc.blocks[9].parameters.size,
       },
     });
   } catch (e) {
@@ -62,7 +73,7 @@ const fs = require("fs");
 // Get document, or throw exception on error
 try {
   const doc = yaml.load(fs.readFileSync("./lab3.grc", "utf8"));
-  console.log(doc.blocks[4].parameters);
+  console.log(doc.blocks[1]);
 } catch (e) {
   console.log(e);
 }
