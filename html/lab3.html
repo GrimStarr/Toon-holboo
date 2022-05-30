@@ -4,11 +4,17 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css.css" />
     <title>GNU</title>
+    <script>
+      function web() {
+        window.location.port = ":5006";
+        window.location.href = "/";
+      }
+    </script>
   </head>
 
   <body>
     <div id="container">
-      <button class="button">Button</button>
+      <button class="button" onclick="web()">Start</button>
 
       <div class="option">
         <p1
@@ -197,14 +203,23 @@
 
       <div class="out1">
         <p>out</p>
+        <div class="signalarrow1"></div>
+        <div class="signalarrow2"></div>
       </div>
 
       <div class="out2">
         <p>out</p>
+        <div class="noisearrow1"></div>
+        <div class="noisearrow2"></div>
       </div>
 
       <div class="out3">
         <p>out</p>
+        <div class="throtarrow5"></div>
+        <div class="throtarrow1"></div>
+        <div class="throtarrow2"></div>
+        <div class="throtarrow3"></div>
+        <div class="throtarrow4"></div>
       </div>
 
       <div class="in0">

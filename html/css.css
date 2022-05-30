@@ -2,7 +2,85 @@
   margin: 0;
   font-size: small;
 }
+.signalarrow1 {
+  position: relative;
+  top: -10px;
+  left: 28px;
+  background-color: black;
+  width: 170px;
+  height: 2px;
+}
 
+.signalarrow2 {
+  position: relative;
+  top: -10px;
+  left: 196px;
+  background-color: black;
+  width: 2px;
+  height: 70px;
+}
+
+.noisearrow1 {
+  position: relative;
+  top: -10px;
+  left: 28px;
+  background-color: black;
+  width: 224px;
+  height: 2px;
+}
+
+.noisearrow2 {
+  position: relative;
+  top: -110px;
+  left: 250px;
+  background-color: black;
+  width: 2px;
+  height: 100px;
+}
+
+.throtarrow1 {
+  position: relative;
+  top: -85px;
+  left: 235px;
+  background-color: black;
+  width: 2px;
+  height: 70px;
+}
+
+.throtarrow2 {
+  position: relative;
+  top: -155px;
+  left: 235px;
+  background-color: black;
+  width: 200px;
+  height: 2px;
+}
+
+.throtarrow3 {
+  position: relative;
+  top: -72px;
+  left: 235px;
+  background-color: black;
+  width: 2px;
+  height: 70px;
+}
+
+.throtarrow4 {
+  position: relative;
+  top: -73px;
+  left: 235px;
+  background-color: black;
+  width: 200px;
+  height: 2px;
+}
+.throtarrow5 {
+  position: relative;
+  top: -10px;
+  left: 29px;
+  background-color: black;
+  width: 56px;
+  height: 2px;
+}
 body {
   background-color: white;
 }
@@ -13,6 +91,9 @@ body {
 }
 
 .button {
+  position: absolute;
+  top: 5px;
+  left: 1180px;
   background-color: #4caf50;
   border: none;
   color: white;

@@ -2,12 +2,96 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script>
+      function web() {
+        console.log(window.location.hostname + ":5006");
+        window.open("https://" + window.location.hostname + ":5006", "_self");
+      }
+    </script>
     <style>
       * {
         margin: 0;
         font-size: small;
       }
+      .signalarrow1 {
+        position: relative;
+        top: -10px;
+        left: 28px;
+        background-color: black;
+        width: 170px;
+        height: 2px;
+      }
 
+      .signalarrow2 {
+        position: relative;
+        top: -10px;
+        left: 196px;
+        background-color: black;
+        width: 2px;
+        height: 70px;
+      }
+
+      .noisearrow1 {
+        position: relative;
+        top: -10px;
+        left: 28px;
+        background-color: black;
+        width: 224px;
+        height: 2px;
+      }
+
+      .noisearrow2 {
+        position: relative;
+        top: -110px;
+        left: 250px;
+        background-color: black;
+        width: 2px;
+        height: 100px;
+      }
+
+      .throtarrow1 {
+        position: relative;
+        top: -85px;
+        left: 235px;
+        background-color: black;
+        width: 2px;
+        height: 70px;
+      }
+
+      .throtarrow2 {
+        position: relative;
+        top: -155px;
+        left: 235px;
+        background-color: black;
+        width: 200px;
+        height: 2px;
+      }
+
+      .throtarrow3 {
+        position: relative;
+        top: -72px;
+        left: 235px;
+        background-color: black;
+        width: 2px;
+        height: 70px;
+      }
+
+      .throtarrow4 {
+        position: relative;
+        top: -73px;
+        left: 235px;
+        background-color: black;
+        width: 200px;
+        height: 2px;
+      }
+      .throtarrow5 {
+        position: relative;
+        top: -10px;
+        left: 29px;
+        background-color: black;
+        width: 56px;
+        height: 2px;
+      }
       body {
         background-color: white;
       }
@@ -18,6 +102,9 @@
       }
 
       .button {
+        position: absolute;
+        top: 5px;
+        left: 1180px;
         background-color: #4caf50;
         border: none;
         color: white;
@@ -237,12 +324,7 @@
 
   <body>
     <div id="container">
-      <button
-        class="button"
-        onclick="window.location.port=':5006'"
-      >
-        Button
-      </button>
+      <button class="button" onclick="web()">Start</button>
 
       <div class="option">
         <p1
@@ -431,14 +513,23 @@
 
       <div class="out1">
         <p>out</p>
+        <div class="signalarrow1"></div>
+        <div class="signalarrow2"></div>
       </div>
 
       <div class="out2">
         <p>out</p>
+        <div class="noisearrow1"></div>
+        <div class="noisearrow2"></div>
       </div>
 
       <div class="out3">
         <p>out</p>
+        <div class="throtarrow5"></div>
+        <div class="throtarrow1"></div>
+        <div class="throtarrow2"></div>
+        <div class="throtarrow3"></div>
+        <div class="throtarrow4"></div>
       </div>
 
       <div class="in0">
