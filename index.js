@@ -66,14 +66,3 @@ process.on("unhandledRejection", (err, promise) => {
     process.exit(1);
   });
 });
-
-const yaml = require("js-yaml");
-const fs = require("fs");
-
-// Get document, or throw exception on error
-try {
-  const doc = yaml.load(fs.readFileSync("./lab3.grc", "utf8"));
-  console.log(doc.blocks[1]);
-} catch (e) {
-  console.log(e);
-}
