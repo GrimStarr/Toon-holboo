@@ -331,13 +331,13 @@
           ><center><b>Options</b></center></p1
         >
         <p2>
-          <p><b>Title:</b> tutorial</p></p2
+          <p><b>Title:</b> <%= data.title %></p></p2
         >
         <p2>
-          <p><b>Output Language:</b> Phython</p></p2
+          <p><b>Output Language:</b> <%= data.output_language %></p></p2
         >
         <p2>
-          <p><b>Generate Options:</b> Bokeh GUI</p></p2
+          <p><b>Generate Options:</b> <%= data.generate_options %></p></p2
         >
       </div>
 
@@ -346,10 +346,10 @@
           ><center><b>Variable</b></center></p1
         >
         <p2>
-          <p><b>ID:</b> samp_rate</p></p2
+          <p><b>ID:</b> <%= data.variable %></p></p2
         >
         <p2>
-          <p><b>Value:</b> 32k</p></p2
+          <p><b>Value:</b> <%= data.variable_val %></p></p2
         >
       </div>
 
@@ -358,22 +358,22 @@
           ><center><b>Bokeh GUI Slider</b></center></p1
         >
         <p2>
-          <p><b>ID:</b> frequency</p></p2
+          <p><b>ID:</b> <%= data.block_freq %></p></p2
         >
         <p2>
-          <p><b>Label:</b> Frequency</p></p2
+          <p><b>Label:</b> <%= data.block_freq_label %></p></p2
         >
         <p2>
-          <p><b>Start:</b> 100</p></p2
+          <p><b>Start:</b> <%= data.block_freq_start %></p></p2
         >
         <p2>
-          <p><b>End:</b> 10k</p></p2
+          <p><b>End:</b> <%= data.block_freq_end %></p></p2
         >
         <p2>
-          <p><b>Default Value:</b> 5k</p></p2
+          <p><b>Default Value:</b> <%= data.block_freq_value %></p></p2
         >
         <p2>
-          <p><b>Throttle:</b> 1</p></p2
+          <p><b>Throttle:</b> <%= data.block_freq_throt %></p></p2
         >
       </div>
 
@@ -382,22 +382,22 @@
           ><center><b>Bokeh GUI Slider</b></center></p1
         >
         <p2>
-          <p><b>ID:</b> noise_amp</p></p2
+          <p><b>ID:</b> <%= data.noise_amp %></p></p2
         >
         <p2>
-          <p><b>Label:</b> Noise Amplitude</p></p2
+          <p><b>Label:</b> <%= data.noise_amp_label %></p></p2
         >
         <p2>
-          <p><b>Start:</b> 10m</p></p2
+          <p><b>Start:</b> <%= data.noise_amp_start %></p></p2
         >
         <p2>
-          <p><b>End:</b> 10</p></p2
+          <p><b>End:</b> <%= data.noise_amp_end %></p></p2
         >
         <p2>
-          <p><b>Default Value:</b> 10m</p></p2
+          <p><b>Default Value:</b> <%= data.noise_amp_value %></p></p2
         >
         <p2>
-          <p><b>Throttle:</b> 1</p></p2
+          <p><b>Throttle:</b> <%= data.noise_amp_throt %></p></p2
         >
       </div>
 
@@ -460,7 +460,7 @@
           <p><b>Amplitude:</b> 10m</p></p2
         >
         <p2>
-          <p><b>Seed:</b> 0</p></p2
+          <p><b>Seed:</b> <%= data.noise_source_seed %</p></p2
         >
       </div>
 
